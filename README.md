@@ -14,11 +14,41 @@ image: mysql:8.0.33
 environment:
 ```
 
+**Laravel環境構築**
+1. docker-compose exec php bash
+2. composer install
+3. 「.env.example」ファイルを「.env」ファイルに命名を変更。または、新しく.envファイルを作成
+4. .envに以下の環境変数を追加
+```bash
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=laravel_pass
+```
+5. アプリケーションキーの作成
+```bash
+php artisan key:generate
+```
+6. マイグレーションの実行
+```bash
+php artisan migrate
+```
+7. シーディングの実行
+```bash
+php artisan db:seed
+```
+
 ## 使用技術(実行環境)
-- 例) Laravel 8.x(言語やフレームワーク、バージョンなどが記載されていると良い)
+・PHP7.4.9
+・Laravel8.83.27
+・MySQL8.0.33
 
 ## ER図
 < - - - 作成したER図の画像 - - - >
 
+
 ## URL
-- 例) 開発環境：http://localhost/
+・開発環境：http://localhost/
+・phpMyAdmin：http://localhost:8080/
