@@ -47,7 +47,7 @@ php artisan db:seed
 
 ## ER図
 < - - - 作成したER図の画像 - - - >
-![ER図](./image/diagram.drawio.png)
+![ER図](./diagram.drawio.png)
 
 ## URL
 ・開発環境：http://localhost/
