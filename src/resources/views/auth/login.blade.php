@@ -4,15 +4,14 @@
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection
 
-@section('logo')
-<a class="header__login-link" href="/login" >register</a>
+@section('button')
+<a class="header__button" href="/register">register</a>
 @endsection
 
 @section('content')
+<h2>Login</h2>
+
 <div class="register-form__content">
-    <div class="register-form__heading">
-        <h2>Login</h2>
-    </div>
     <form class="form" action="/login" method="post">
         @csrf
         <div class="form__group">
@@ -21,7 +20,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="email" name="email" value="{{ old('email') }}" />
+                    <input type="email" name="email" value="{{ old('email') }}" placeholder="test@example.com"/>
                 </div>
                 <div class="form__error">
                 @error('email')
@@ -36,7 +35,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="password" name="password" />
+                    <input type="password" name="password" value="{{ old('email') }}" placeholder=coachtech1106 />
                 </div>
                 <div class="form__error">
                 @error('password')
