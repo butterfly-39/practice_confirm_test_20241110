@@ -4,12 +4,17 @@
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endsection
 
+@section('logo')
+<a class="header__login-link" href="/login" >login</a>
+@endsection
+
 @section('content')
 <div class="register-form__content">
     <div class="register-form__heading">
         <h2>Register</h2>
     </div>
-    <form class="form">
+    <form class="form" action="/register" method="post">
+        @csrf
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">お名前</span>
