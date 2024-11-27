@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 @endsection
 
-@section('logo')
+@section('button')
 <a class="header__button" href="/logout">logout</a>
 @endsection
 
