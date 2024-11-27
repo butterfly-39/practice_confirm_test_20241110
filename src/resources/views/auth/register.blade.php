@@ -4,15 +4,13 @@
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endsection
 
-@section('logo')
+@section('button')
 <a class="header__button" href="/login">login</a>
 @endsection
 
 @section('content')
+<h2>Register</h2>
 <div class="register-form__content">
-    <div class="register-form__heading">
-        <h2>Register</h2>
-    </div>
     <form class="form" action="/register" method="post">
         @csrf
         <div class="form__group">
@@ -60,9 +58,9 @@
                 </div>
             </div>
         </div>
-        <div class="form__button">
+        <form action="/login" method="get">
             <button class="form__button-submit" type="submit">登録</button>
-        </div>
+        </form>
     </form>
 </div>
 @endsection

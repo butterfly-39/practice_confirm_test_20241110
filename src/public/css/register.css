@@ -15,12 +15,11 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.register-form__heading h2 {
+h2 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     color: #8e7963;
-    margin-bottom: 20px;
 }
 
 .form {
