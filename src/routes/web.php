@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Middleware\EnsureUserIsAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,9 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/register', [AuthController::class, 'store']);
 Route::post('/logout', [AuthController::class, 'logout']);
-Route::middleware('auth')->group(function () {
-    Route::get('/admin', [AuthController::class, 'admin']);
+Route::middleware('auth', 'admin')->group(function () {
+    Route::get('/admin', [AuthController::class, 'admin'])->name('auth.admin');
 });

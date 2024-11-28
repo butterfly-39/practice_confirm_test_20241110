@@ -28,15 +28,20 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        //新規ユーザーが作成処理をカスタマイズ
         Fortify::createUsersUsing(CreateNewUser::class);
+
+        //登録ページのビュー
         Fortify::registerView(function () {
             return view('auth.register');
         });
 
+        //ログインページのビュー
         Fortify::loginView(function () {
             return view('auth.login');
         });
 
+        //ログイン試行制限
         RateLimiter::for('login', function (Request $request) {
         $email = (string) $request->email;
 
