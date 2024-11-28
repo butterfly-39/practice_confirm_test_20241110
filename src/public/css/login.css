@@ -68,16 +68,11 @@ h2 {
     color: #d9534f;
 }
 
-.form__button {
-    text-align: center;
-    padding-top: 40px;
-}
-
 .form__button-submit {
     background-color: #8e7963;
     color: #fff;
     font-size: 16px;
-    padding: 5px 25px;
+    padding: 5px 10px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;

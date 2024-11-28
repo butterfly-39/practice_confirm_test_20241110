@@ -55,4 +55,10 @@ class AuthController extends Controller
 
         return view('auth.admin', compact('contents'));
     }
+
+    //お問い合わせフォーム
+    public function contact(Request $request)
+    {
+        return view('auth.contact');
+    }
 }

@@ -21,3 +21,4 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::middleware('auth', 'admin')->group(function () {
     Route::get('/admin', [AuthController::class, 'admin'])->name('auth.admin');
 });
+Route::get('/contact', [AuthController::class, 'contact'])->name('auth.contact');
